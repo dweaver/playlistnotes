@@ -1,0 +1,16 @@
+{
+  "resourceName": "imagestorage",
+  "policyUUID": "b812cf07",
+  "bucketName": "playlistnotes-images",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
