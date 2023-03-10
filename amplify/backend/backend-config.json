@@ -1,5 +1,19 @@
 {
   "api": {
+    "playlist": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "Playlist"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "playlistnotes": {
       "dependsOn": [],
       "output": {
@@ -41,6 +55,31 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "Playlist": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_Playlist_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "Playlist"
+        }
+      ]
+    },
+    "AMPLIFY_function_Playlist_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "Playlist"
+        }
+      ]
     }
   },
   "storage": {

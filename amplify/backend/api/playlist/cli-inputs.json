@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/playlist/{playlist-id}": {
+      "name": "/playlist/{playlist-id}",
+      "lambdaFunction": "Playlist",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
